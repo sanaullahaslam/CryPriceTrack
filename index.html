@@ -61,7 +61,7 @@
             border-radius: 50%;
             border: 5px solid transparent;
             border-top-color: #fff; /* Loading bar color */
-            animation: spin 2s linear infinite;
+            animation: spin 1s linear infinite;
         }
 
         #crypto-list {
@@ -165,7 +165,7 @@
             .catch(error => {
                 console.error('Error fetching data:', error);
                 // Hide loading bar in case of an error
-                //loadingBar.style.display = 'none';
+                loadingBar.style.display = 'none';
             });
     });
 </script>
