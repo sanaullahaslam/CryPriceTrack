@@ -111,27 +111,39 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const cryptoListElement = document.getElementById('crypto-list');
+       document.addEventListener('DOMContentLoaded', function () {
+    const cryptoListElement = document.getElementById('crypto-list');
+    const loadingBar = document.getElementById('loading-bar');
 
-            // Fetch top 20 cryptocurrencies from CoinGecko API
-            fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false')
-            .then(response => response.json())
-            .then(data => {
-                // Loop through the data and create a card for each cryptocurrency
-                data.forEach(crypto => {
-                    const card = document.createElement('div');
-                    card.className = 'crypto-card';
-                    card.innerHTML = `
-                        <h2>${crypto.name}</h2>
-                        <p>${crypto.symbol}</p>
-                        <p>Price: $${crypto.current_price.toFixed(2)}</p>
-                    `;
-                    cryptoListElement.appendChild(card);
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
+    // Show loading bar
+    loadingBar.style.display = 'block';
+
+    // Fetch top 20 cryptocurrencies from CoinGecko API
+    fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false')
+        .then(response => response.json())
+        .then(data => {
+            // Hide loading bar
+            loadingBar.style.display = 'none';
+
+            // Loop through the data and create a card for each cryptocurrency
+            data.forEach(crypto => {
+                const card = document.createElement('div');
+                card.className = 'crypto-card';
+                card.innerHTML = `
+                    <h2>${crypto.name}</h2>
+                    <p>${crypto.symbol}</p>
+                    <p>Price: $${crypto.current_price.toFixed(2)}</p>
+                `;
+                cryptoListElement.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            // Hide loading bar in case of an error
+            loadingBar.style.display = 'none';
         });
+});
+
     </script>
 
 </body>
