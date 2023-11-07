@@ -185,7 +185,6 @@ Transform your event with our custom party services. From themed decor to person
         const loadingBar = document.getElementById('loading-bar-container');
         // Show loading bar
         loadingBar.style.display = 'block';
-
         // Fetch top 20 cryptocurrencies from CoinGecko API
         fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false')
             .then(response => response.json())
