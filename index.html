@@ -194,11 +194,11 @@ section {
 <header>
     <img id="logo" src="assets/logo.png" alt="Logo">
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Events</a>
-        <a href="#">News</a>
-        <a href="#">Contact Us</a>
-        <a href="#">About Us</a>
+        <a href="#home">Home</a>
+        <a href="#event">Events</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#aboutus">About Us</a>
     </nav>
     
 </header>
@@ -206,6 +206,20 @@ section {
 <div id="loading-bar-container">
     <div id="loading-bar"></div>
 </div>
+<section id="home">
+  <div id="about-us-section" class="container">
+    <div class="row">
+      <!-- Left side (Text) -->
+      <div class="col-md-6" style="color: #000000;">
+        <h1>CrypriceTracker</h1>
+        <h4>Discover the world of cryptocurrencies at CryPriceTracker: your go-to for live prices, upcoming events, and breaking news. Stay ahead in the fast-paced crypto market with real-time data and valuable insights. Join us for a seamless journey through the digital financial landscape.</h4>
+      </div>
+      <!-- Right side (Image) -->
+      <div class="col-md-6">
+        <img src="assets/news1.jpg" alt="CryPriceTracker Image" class="img-fluid">
+      </div>
+    </div>
+  </div>
 <main>
     <div id="crypto-list"></div>
 </main>
@@ -213,48 +227,10 @@ section {
           <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="container mt-5" style="color: #616A6B;">
-        <div class="contact-section">
-          <div class="contact-info">
-            <h4>Full Name</h4>
-            <input type="text" class="form-control mb-3" placeholder="Enter your full name">
-      
-            <h4>Phone</h4>
-            <input type="tel" class="form-control mb-3" placeholder="Enter your phone number">
-          </div>
-      
-          <div class="contact-info">
-            <h4>Email</h4>
-            <input type="email" class="form-control mb-3" placeholder="Enter your email">
-      
-            <h4>Address</h4>
-            <input type="text" class="form-control mb-3" placeholder="Enter your address">
-          </div>
-        </div>
-      
-        <div class="contact-description">
-          <h4>Description</h4>
-          <textarea class="form-control" rows="4" placeholder="Enter a brief description"></textarea>
-        </div>
-      
-        <button type="submit" class="btn btn-success submit-btn">Submit</button>
-      </div>
+    </section>
 
-      <div id="about-us-section" class="container">
-        <div class="row">
-          <!-- Left side (Text) -->
-          <div class="col-md-6" style="color: #000000;">
-            <h1>CrypriceTracker</h1>
-            <h4>Discover the world of cryptocurrencies at CryPriceTracker: your go-to for live prices, upcoming events, and breaking news. Stay ahead in the fast-paced crypto market with real-time data and valuable insights. Join us for a seamless journey through the digital financial landscape.</h4>
-          </div>
-    
-          <!-- Right side (Image) -->
-          <div class="col-md-6">
-            <img src="assets/news1.jpg" alt="CryPriceTracker Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
 
+    <section id="event">
       <div class="container" style="color: #3498DB;">
         <div class="event-section">
             <div class="row">
@@ -295,8 +271,10 @@ section {
             </div>
         </div>
     </div>
+  </section>
 
-    
+
+  <section id="news">
     <div class="container" style="color: #3498DB;">
       <div class="news-section">
           <h2 class="text-center mb-4">Latest News</h2>
@@ -333,11 +311,50 @@ section {
                       </div>
                   </div>
               </div>
+            </section>
 
+
+
+      <section id="contact">
+      <div class="container mt-5" style="color: #616A6B;">
+        <div class="contact-section">
+          <div class="contact-info">
+            <h4>Full Name</h4>
+            <input type="text" class="form-control mb-3" placeholder="Enter your full name">
+      
+            <h4>Phone</h4>
+            <input type="tel" class="form-control mb-3" placeholder="Enter your phone number">
+          </div>
+      
+          <div class="contact-info">
+            <h4>Email</h4>
+            <input type="email" class="form-control mb-3" placeholder="Enter your email">
+      
+            <h4>Address</h4>
+            <input type="text" class="form-control mb-3" placeholder="Enter your address">
+          </div>
+        </div>
+      
+        <div class="contact-description">
+          <h4>Description</h4>
+          <textarea class="form-control" rows="4" placeholder="Enter a brief description"></textarea>
+        </div>
+      
+        <button type="submit" class="btn btn-success submit-btn">Submit</button>
+      </div>
+    </section>
+
+  
+       
+    
+
+            
+    <section id="aboutus">
       <footer class="footer">
         Developed by: Sanaullah Aslam Babar <br>
         All rights reserved @Cryptotracker
       </footer>
+      </section>
       
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
